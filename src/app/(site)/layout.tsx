@@ -25,10 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-[#EFEFED] flex justify-center items-center ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-gris-moyen flex justify-center items-center ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-full max-w-6xl min-h-[90vh] rounded-3xl border-frame mt-40">
-          {children}
+        <div
+          className="p-[20px] rounded-3xl mt-10"
+          style={{ backgroundImage: 'url("/texture2.svg")' }}
+        >
+          <div className={`bg-gris-clair rounded-xl`}>{children}</div>
         </div>
       </body>
     </html>

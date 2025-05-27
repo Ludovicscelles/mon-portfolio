@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --gris-moyen: #EFEFED;
+  --gris-clair: #F5F5F5;
 }
 
 @theme inline {
@@ -25,11 +27,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.border-frame {
+.bg-gris-moyen {
+  background-color: var(--gris-moyen);
+}
+
+.bg-gris-clair {
+  background-color: var(--gris-clair);
+}
+
+/* .border-frame {
   border-width: 34px;
   border-image-source: url("/texture.svg");
   border-image-slice: 30;
   border-image-repeat: stretch;
   border-style: solid;
   
-}
+} */

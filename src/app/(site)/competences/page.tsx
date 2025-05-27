@@ -7,6 +7,9 @@ export default function Competences() {
         <li>Competence 1</li>
         <li>Competence 2</li>
         <li>Competence 3</li>
+         <li>Competence 1</li>
+        <li>Competence 2</li>
+        <li>Competence 3</li>
       </ul>
     </div>
   );
