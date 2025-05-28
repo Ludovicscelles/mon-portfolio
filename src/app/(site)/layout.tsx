@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../../app/globals.css";
+import Header from "../(site)/components/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,13 @@ export default function RootLayout({
         className={`bg-gris-moyen flex justify-center items-center ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div
-          className="p-[20px] rounded-3xl mt-10"
+          className="p-[10px] md:p-[20px] rounded-3xl mt-10"
           style={{ backgroundImage: 'url("/texture2.svg")' }}
         >
-          <div className={`bg-gris-clair rounded-xl`}>{children}</div>
+          <div className={`bg-gris-clair rounded-xl`}>
+            <Header></Header>
+            {children}
+          </div>
         </div>
       </body>
     </html>
