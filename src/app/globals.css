@@ -41,6 +41,10 @@ body {
   color: var(--dark-blue);
 }
 
+a.blue-text:hover {
+  color:black;
+}
+
 /* .border-frame {
   border-width: 34px;
   border-image-source: url("/texture.svg");
