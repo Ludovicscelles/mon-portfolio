@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../../app/globals.css";
 import Header from "../(site)/components/Header";
+import BurgerMenu from "../(site)/components/BurgerMenu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         >
           <div className={`bg-gris-clair rounded-xl`}>
             <Header></Header>
+            <BurgerMenu></BurgerMenu>
             {children}
           </div>
         </div>
