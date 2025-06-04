@@ -104,6 +104,44 @@ export const projects: Project[] = [
       "Figma",
       "Agile Scrum",
     ],
-    linkCode: "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-1-Team-BLors de ma formation de Concepteur Développeur à la Wild Code School, j’ai contribué à la création d’une plateforme communautaire : une bibliothèque de films participative centrée sur le genre thriller. Il s’agit d’un site concept permettant aux utilisateurs de chercher des films, consulter leur synopsis, laisser une note et publier un avis. Au sein d’une équipe de 4 personnes, nous avons conçu une interface intuitive, mis en place une base de données, ainsi que les logiques métiers nécessaires au bon fonctionnement du site. Pour en savoir plus, vous pouvez consulter notre dépôt GitHub : https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-1-Team-B"
+    linkCode:
+      "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-1-Team-BLors de ma formation de Concepteur Développeur à la Wild Code School, j’ai contribué à la création d’une plateforme communautaire : une bibliothèque de films participative centrée sur le genre thriller. Il s’agit d’un site concept permettant aux utilisateurs de chercher des films, consulter leur synopsis, laisser une note et publier un avis. Au sein d’une équipe de 4 personnes, nous avons conçu une interface intuitive, mis en place une base de données, ainsi que les logiques métiers nécessaires au bon fonctionnement du site. Pour en savoir plus, vous pouvez consulter notre dépôt GitHub : https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-1-Team-B",
+  },
+  {
+    id: "swap-it",
+    name: "Swap It",
+    logo: "/images/projects/logoSwapIt.svg",
+    displayDesktop: "/images/projects/displayDesktopSwapIt.svg",
+    displayMobile: "/images/projects/displayMobileSwapIt.svg",
+    shortDescription: "Site d’échanges de matériel IT",
+    objective:
+      "Développer une plateforme d’échange dédiée au troc de matériel IT entre utilisateurs.",
+    features: [
+      {
+        title: "Gestion des catégories :",
+        description:
+          "affichage des produits par catégories pour une navigation simplifiée.",
+      },
+      {
+        title: "Recherche avancée :",
+        description:
+          "création d’une barre de recherche pour trouver facilement un modèle ou une catégorie de produits.",
+      },
+      {
+        title: "Ajout de produit :",
+        description:
+          "mise en place d’un formulaire pour permettre aux utilisateurs de créer des fiches produits.",
+      },
+      {
+        title: "Mise en place des échanges (swap) :",
+        description:
+          "fonctionnalité permettant à deux utilisateurs connectés d’échanger leurs produits.",
+      },
+    ],
+    keyCompetences:
+      "conception de BDD, développement API, gestion des données, mise en place des logiques métier, frontend dynamique.",
+    competences: ["React", "MySQL", "Node", "Express", "Figma", "Agile Scrum"],
+    linkCode:
+      "https://github.com/WildCodeSchool-2024-02/JS-Paris-BrainWaves-P3-Swapit",
   },
 ];
