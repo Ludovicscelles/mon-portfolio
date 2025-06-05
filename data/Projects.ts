@@ -105,7 +105,7 @@ export const projects: Project[] = [
       "Agile Scrum",
     ],
     linkCode:
-      "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-1-Team-BLors de ma formation de Concepteur Développeur à la Wild Code School, j’ai contribué à la création d’une plateforme communautaire : une bibliothèque de films participative centrée sur le genre thriller. Il s’agit d’un site concept permettant aux utilisateurs de chercher des films, consulter leur synopsis, laisser une note et publier un avis. Au sein d’une équipe de 4 personnes, nous avons conçu une interface intuitive, mis en place une base de données, ainsi que les logiques métiers nécessaires au bon fonctionnement du site. Pour en savoir plus, vous pouvez consulter notre dépôt GitHub : https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-1-Team-B",
+      "https://github.com/Ludovicscelles/JS-CDA-Projet-1-Team-B-Thriller-Mania",
   },
   {
     id: "swap-it",
@@ -177,8 +177,8 @@ export const projects: Project[] = [
     id: "back-to-the-cine",
     name: "Back To The Ciné",
     logo: "/images/projects/logoBackToTheCine.svg",
-    displayDesktop: "images/projects/displayDesktopBackToTheCine.svg",
-    displayMobile: "images/projects/displayMobileBackToTheCine.svg",
+    displayDesktop: "/images/projects/displayDesktopBackToTheCine.svg",
+    displayMobile: "/images/projects/displayMobileBackToTheCine.svg",
     shortDescription: "Site de programmation d’une salle de cinéma",
     objective:
       "Développer un site pour un cinéma atypique, dédié aux films cultes des années 80.",

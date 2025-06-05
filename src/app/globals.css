@@ -7,6 +7,7 @@
   --gris-moyen: #efefed;
   --gris-clair: #f5f5f5;
   --dark-blue: #0b467e;
+  --purple: #989EFA;
 }
 
 @theme inline {
@@ -37,6 +38,10 @@ body {
   background-color: var(--gris-clair);
 }
 
+.bg-purple {
+  background-color: var(--purple) ;
+}
+
 .blue-text {
   color: var(--dark-blue);
 }
@@ -44,6 +49,8 @@ body {
 a.blue-text:hover {
   color:black;
 }
+
+
 
 /* .border-frame {
   border-width: 34px;
