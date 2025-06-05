@@ -12,8 +12,8 @@ export type Project = {
   shortDescription: string;
   objective: string;
   features: Feature[];
-  keyCompetences: string;
-  competences: string[];
+  keySkills: string;
+  skills: string[];
   linkDemoOrDeployedSite?: string;
   linkCode: string;
 };
@@ -49,9 +49,9 @@ export const projects: Project[] = [
           "possibilité d’invalider une facture avec envoi automatique d’un e-mail au responsable de la commission concernée.",
       },
     ],
-    keyCompetences:
+    keySkills:
       "architecture en microservices et en couches, conteneurisation, API, manipulation des données, front-end dynamique.",
-    competences: [
+    skills: [
       "TypeORM",
       "TypeScript",
       "Docker",
@@ -93,8 +93,8 @@ export const projects: Project[] = [
           "affichage optimisé et filtré des films en fonction des recherches des utilisateurs.",
       },
     ],
-    keyCompetences: "API, manipulation des données, front-end dynamique.",
-    competences: [
+    keySkills: "API, manipulation des données, front-end dynamique.",
+    skills: [
       "TypeScript",
       "React",
       "SQLite",
@@ -138,10 +138,66 @@ export const projects: Project[] = [
           "fonctionnalité permettant à deux utilisateurs connectés d’échanger leurs produits.",
       },
     ],
-    keyCompetences:
+    keySkills:
       "conception de BDD, développement API, gestion des données, mise en place des logiques métier, frontend dynamique.",
-    competences: ["React", "MySQL", "Node", "Express", "Figma", "Agile Scrum"],
+    skills: ["React", "MySQL", "Node", "Express", "Figma", "Agile Scrum"],
     linkCode:
       "https://github.com/WildCodeSchool-2024-02/JS-Paris-BrainWaves-P3-Swapit",
+  },
+
+  {
+    id: "wizard-castle",
+    name: "Wizard's Castle",
+    logo: "/images/projects/logoWizardCastle.svg",
+    displayDesktop: "/images/projects/displayDesktopWizardCastle.svg",
+    displayMobile: "/images/projects/displayMobileWizardCastle.svg",
+    shortDescription: "Guide pour le jeu Donjons & Dragons",
+    objective:
+      "Développer un guide interactif pour les joueurs du jeu Donjons & Dragons, qu’ils soient débutants ou expérimentés.",
+    features: [
+      {
+        title: "Règles du jeu :",
+        description:
+          "affichage des règles par catégorie accessibles via des boutons pour une navigation simplifiée.",
+      },
+      {
+        title: "Recherche des monstres :",
+        description:
+          "mise en place d’une barre de recherche pour filtrer rapidement les créatures sur la page “Bestiary”.",
+      },
+    ],
+    keySkills:
+      "Utilisation d’une API publique, gestion des données, frontend dynamique.",
+    skills: ["React", "Figma", "Agile Scrum"],
+    linkDemoOrDeployedSite: "https://wcs-p2-wizard-castle.vercel.app/",
+    linkCode:
+      "https://github.com/WildCodeSchool-2024-02/JS-Paris-BrainWaves-P2-WizardCastle",
+  },
+  {
+    id: "back-to-the-cine",
+    name: "Back To The Ciné",
+    logo: "/images/projects/logoBackToTheCine.svg",
+    displayDesktop: "images/projects/displayDesktopBackToTheCine.svg",
+    displayMobile: "images/projects/displayMobileBackToTheCine.svg",
+    shortDescription: "Site de programmation d’une salle de cinéma",
+    objective:
+      "Développer un site pour un cinéma atypique, dédié aux films cultes des années 80.",
+    features: [
+      {
+        title: "Page de programmation :",
+        description:
+          "conception d’une page détaillant la programmation avec affichage des titres, descriptions et affiches des films.",
+      },
+      {
+        title: "Éléments dynamiques :",
+        description:
+          "ajout des horaires des séances et des liens vers les bandes-annonces pour une expérience utilisateur plus immersive.",
+      },
+    ],
+    keySkills: "maquettage, développement frontend statique et dynamique.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    linkDemoOrDeployedSite:
+      "https://nicosmq.github.io/Projet-1-Back-To-The-Cine/",
+    linkCode: "https://github.com/Ludovicscelles/Projet-1-Back-To-The-Cine",
   },
 ];
