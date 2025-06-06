@@ -7,7 +7,8 @@
   --gris-moyen: #efefed;
   --gris-clair: #f5f5f5;
   --dark-blue: #0b467e;
-  --purple: #989EFA;
+  --purple: #989efa;
+  --clear-blue: #9fd3ed;
 }
 
 @theme inline {
@@ -38,8 +39,12 @@ body {
   background-color: var(--gris-clair);
 }
 
+.bg-clear-blue {
+  background-color: var(--clear-blue);
+}
+
 .bg-purple {
-  background-color: var(--purple) ;
+  background-color: var(--purple);
 }
 
 .blue-text {
@@ -47,10 +52,8 @@ body {
 }
 
 a.blue-text:hover {
-  color:black;
+  color: black;
 }
-
-
 
 /* .border-frame {
   border-width: 34px;
