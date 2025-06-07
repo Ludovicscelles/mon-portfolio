@@ -28,7 +28,7 @@ export default function OpeningToProjects() {
               ? ImageOpeningToProjectMobile
               : ImageOpeningToProjectDesktop
           }
-          alt="Image représentant une ouverture vers le projets"
+          alt="Visuel d'accueil vers les projets"
           fill
           className="object-cover"
         />
