@@ -1,25 +1,20 @@
-export type Skill = {
-  id: string;
-  name: string;
-  icon: string;
-  description: string;
-};
-
-export type SkillCategory = {
-  category: string;
-  skills: Skill[];
-};
+import { SkillCategory } from "@/types/SkillTypes";
 
 export const skills: SkillCategory[] = [
   {
     category: "Front-end",
     skills: [
       {
-        id: "html-css",
-        name: "HTML et CSS",
-        icon: "/images/skills/logosHTMLandCSS.svg",
-        description:
-          "L’HTML pour structurer le contenu des pages web et le CSS pour définir l’apparence visuelle.",
+        id: "html",
+        name: "HTML",
+        icon: "/images/skills/logoHTML.svg",
+        description: "L’HTML pour structurer le contenu des pages web.",
+      },
+      {
+        id: "css",
+        name: "CSS",
+        icon: "/images/skills/logoCSS.svg",
+        description: "Le CSS pour définir l’apparence visuelle.",
       },
       {
         id: "js",
@@ -104,9 +99,9 @@ export const skills: SkillCategory[] = [
       {
         id: "git-github",
         name: "Git et GitHub",
-        icon: "/images/skills/logosGitAndGitHub.svg",
+        icon: "/images/skills/logoGitHub.svg",
         description:
-          "Git pour versioner mon code et suivre l’évolution des projets. GitHub pour héberger, collaborer et partager mes projets en ligne.",
+          "Git pour versioner mon code, GitHub pour héberger, collaborer et partager mes projets.",
       },
       {
         id: "typescript",

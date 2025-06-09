@@ -30,6 +30,7 @@ body {
   /* background: var(--background); */
   color: var(--foreground);
   font-family: "Quicksand", sans-serif;
+  /* font-family: "Reddit Sans", sans-serif; */
 }
 
 .bg-gris-moyen {
@@ -46,6 +47,10 @@ body {
 
 .bg-purple {
   background-color: var(--purple);
+}
+
+.title {
+  font-family: "Reddit Sans", sans-serif;
 }
 
 .blue-text {
