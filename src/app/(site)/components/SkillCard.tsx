@@ -21,11 +21,13 @@ export default function SkillCard({ skills }: SkillCardProps) {
               <Image
                 src={skill.icon}
                 alt={`Logo de la compétence ${skill.name}`}
-                width={50}
-                height={50}
+                width={45}
+                height={45}
                 className="object-contain mx-auto"
               />
-              <p className="text-sm justify-center mt-2">{skill.description}</p>
+              <p className="text-xs font-bold justify-center mt-2">
+                {skill.description}
+              </p>
             </div>
           </div>
         </div>
