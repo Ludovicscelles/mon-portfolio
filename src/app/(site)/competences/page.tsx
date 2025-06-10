@@ -5,7 +5,7 @@ import SkillCard from "../components/SkillCard";
 export default function Competences() {
   return (
     <div>
-      <h1 className="title blue-text text-2xl md:text-6xl font-semibold text-center mt-5 md:mt-30 mb-5 md:mb-20">
+      <h1 className="title blue-text text-2xl md:text-6xl font-bold text-center mt-5 md:mt-30 mb-5 md:mb-20">
         Compétences
       </h1>
       {skills.map((category, index) => (

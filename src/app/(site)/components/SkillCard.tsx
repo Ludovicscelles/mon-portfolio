@@ -15,8 +15,12 @@ export default function SkillCard({ skills }: SkillCardProps) {
           key={skill.id}
           className="relative w-60 h-32 md:ml-10 md:mr-10 md:mb-10"
         >
-          <div className="absolute bg-clear-blue -right-2 top-2 rounded-[50px] md:-right-2 md:top-2 z-0 w-60 h-32"></div>
-          <div className="relative bg-white border border-[var(--clear-blue)] rounded-[50px] overflow-hidden z-10 w-60 h-32 flex items-center justify-center">
+          <div
+            className={`absolute ${skill.bgColor ?? "bg-clear-blue"} -right-2 top-2 rounded-[50px] md:-right-2 md:top-2 z-0 w-60 h-32`}
+          ></div>
+          <div
+            className={`relative bg-white border ${skill.borderColor ?? "border-clear-blue"} rounded-[50px] overflow-hidden z-10 w-60 h-32 flex items-center justify-center`}
+          >
             <div className="w-full px-4 text-center">
               <Image
                 src={skill.icon}
