@@ -56,10 +56,14 @@ body {
 
 .border-clear-blue {
   border-color: var(--clear-blue);
+  border-style: solid;
+  border-width: 2px;
 }
 
 .border-purple {
   border-color: var(--purple);
+  border-style: solid;
+  border-width: 2px;
 }
 
 .border-medium-blue {

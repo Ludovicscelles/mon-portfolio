@@ -1,22 +1,4 @@
-export type Feature = {
-  title: string;
-  description: string;
-};
-
-export type Project = {
-  id: string;
-  name: string;
-  logo: string;
-  displayDesktop: string;
-  displayMobile: string;
-  shortDescription: string;
-  objective: string;
-  features: Feature[];
-  keySkills: string;
-  skills: string[];
-  linkDemoOrDeployedSite?: string;
-  linkCode: string;
-};
+import { Project } from "@/types/ProjectTypes";
 
 export const projects: Project[] = [
   {
@@ -66,6 +48,8 @@ export const projects: Project[] = [
     ],
     linkCode:
       "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-2-Team-D",
+    bgColor: "bg-clear-blue",
+    borderColor: "border-clear-blue",
   },
   {
     id: "thrillermania",
@@ -106,6 +90,8 @@ export const projects: Project[] = [
     ],
     linkCode:
       "https://github.com/Ludovicscelles/JS-CDA-Projet-1-Team-B-Thriller-Mania",
+    bgColor: "bg-purple",
+    borderColor: "border-purple",
   },
   {
     id: "swap-it",
@@ -143,6 +129,8 @@ export const projects: Project[] = [
     skills: ["React", "MySQL", "Node", "Express", "Figma", "Agile Scrum"],
     linkCode:
       "https://github.com/WildCodeSchool-2024-02/JS-Paris-BrainWaves-P3-Swapit",
+    bgColor: "bg-medium-blue",
+    borderColor: "border-medium-blue",
   },
 
   {
@@ -172,6 +160,8 @@ export const projects: Project[] = [
     linkDemoOrDeployedSite: "https://wcs-p2-wizard-castle.vercel.app/",
     linkCode:
       "https://github.com/WildCodeSchool-2024-02/JS-Paris-BrainWaves-P2-WizardCastle",
+    bgColor: "bg-clear-blue",
+    borderColor: "border-clear-blue",
   },
   {
     id: "back-to-the-cine",
@@ -199,5 +189,7 @@ export const projects: Project[] = [
     linkDemoOrDeployedSite:
       "https://nicosmq.github.io/Projet-1-Back-To-The-Cine/",
     linkCode: "https://github.com/Ludovicscelles/Projet-1-Back-To-The-Cine",
+    bgColor: "bg-purple",
+    borderColor: "border-purple",
   },
 ];

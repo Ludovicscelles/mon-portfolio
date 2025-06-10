@@ -9,11 +9,11 @@ type SkillCardProps = {
 
 export default function SkillCard({ skills }: SkillCardProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 md:gap-8">
       {skills.map((skill) => (
         <div
           key={skill.id}
-          className="relative w-60 h-32 md:ml-10 md:mr-10 md:mb-10"
+          className="relative w-60 h-32 md:mb-10"
         >
           <div
             className={`absolute ${skill.bgColor ?? "bg-clear-blue"} -right-2 top-2 rounded-[50px] md:-right-2 md:top-2 z-0 w-60 h-32`}
