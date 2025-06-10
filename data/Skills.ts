@@ -9,12 +9,16 @@ export const skills: SkillCategory[] = [
         name: "HTML",
         icon: "/images/skills/logoHTML.svg",
         description: "L’HTML pour structurer le contenu des pages web.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "css",
         name: "CSS",
         icon: "/images/skills/logoCSS.svg",
         description: "Le CSS pour définir l’apparence visuelle.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "js",
@@ -22,6 +26,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoJS.svg",
         description:
           "Le JavaScript pour rendre les pages web interactives et dynamiques.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "react",
@@ -29,6 +35,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoReact.svg",
         description:
           "React pour construire des interfaces utilisateur dynamiques et modulaires.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "tailwind",
@@ -36,6 +44,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoTailwind.svg",
         description:
           "Tailwind pour styliser rapidement les interfaces avec des classes utilitaires.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
     ],
   },
@@ -48,6 +58,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoNode.svg",
         description:
           "Node.js pour exécuter du JS côté serveur et construire des appli web backend.",
+        bgColor: "bg-purple",
+        borderColor: "border-purple",
       },
       {
         id: "express",
@@ -55,6 +67,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoExpress.svg",
         description:
           "Express.js pour concevoir des API et gérer les requêtes côté serveur.",
+        bgColor: "bg-purple",
+        borderColor: "border-purple",
       },
       {
         id: "mysql",
@@ -62,6 +76,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoMySQL.svg",
         description:
           "MySQL pour gérer les données dans une base relationnelle.",
+        bgColor: "bg-purple",
+        borderColor: "border-purple",
       },
       {
         id: "postgresql",
@@ -69,6 +85,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoPostgreSQL.svg",
         description:
           "PostgreSQL pour stocker et organiser les données dans une base relationnelle performante.",
+        bgColor: "bg-purple",
+        borderColor: "border-purple",
       },
       {
         id: "typeorm",
@@ -76,6 +94,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoTypeORM.svg",
         description:
           "TypeORM pour manipuler une BDD avec une approche orientée object en TypeScript.",
+        bgColor: "bg-purple",
+        borderColor: "border-purple",
       },
       {
         id: "graphql",
@@ -83,6 +103,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoGraphQL.svg",
         description:
           "GraphQL pour structurer les données de manière flexible et ciblée via une API.",
+        bgColor: "bg-purple",
+        borderColor: "border-purple",
       },
     ],
   },
@@ -95,6 +117,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoVSCode.svg",
         description:
           "VSCode pour développer efficacement dans un éditeur léger et puissant.",
+        bgColor: "bg-medium-blue",
+        borderColor: "border-medium-blue",
       },
       {
         id: "git-github",
@@ -102,6 +126,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoGitHub.svg",
         description:
           "Git pour versioner mon code, GitHub pour héberger, collaborer et partager mes projets.",
+        bgColor: "bg-medium-blue",
+        borderColor: "border-medium-blue",
       },
       {
         id: "typescript",
@@ -109,6 +135,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoTS.svg",
         description:
           "TypeScript pour renforcer la fiabilité du code grâce au typage.",
+        bgColor: "bg-medium-blue",
+        borderColor: "border-medium-blue",
       },
       {
         id: "apollo",
@@ -116,6 +144,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoApollo.svg",
         description:
           "Apollo pour gérer les requêtes GraphQL entre le client et le serveur.",
+        bgColor: "bg-medium-blue",
+        borderColor: "border-medium-blue",
       },
       {
         id: "docker",
@@ -123,6 +153,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoDocker.svg",
         description:
           "Docker pour containeriser mes applications et simplifier leur déploiement.",
+        bgColor: "bg-medium-blue",
+        borderColor: "border-medium-blue",
       },
     ],
   },
@@ -135,6 +167,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoFigma.svg",
         description:
           "Figma pour maquetter et prototyper des interfaces modernes.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "agile-scrum",
@@ -142,6 +176,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoScrum.svg",
         description:
           "Scrum pour gérer les projets par sprints et favoriser l’adaptation continue.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "uml",
@@ -149,6 +185,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoUML.svg",
         description:
           "UML pour modéliser visuellement la structure et le comportement d’une application.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "office",
@@ -156,6 +194,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoOffice.svg",
         description:
           "Office pour rédiger, présenter et organiser l’information efficacement.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
       {
         id: "power-bi",
@@ -163,6 +203,8 @@ export const skills: SkillCategory[] = [
         icon: "/images/skills/logoPowerBI.svg",
         description:
           "Power BI pour analyser et visualiser des données de façon interactive.",
+        bgColor: "bg-clear-blue",
+        borderColor: "border-clear-blue",
       },
     ],
   },

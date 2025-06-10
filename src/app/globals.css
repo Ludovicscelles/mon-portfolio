@@ -10,6 +10,7 @@
   --dark-blue: #0b467e;
   --purple: #989efa;
   --clear-blue: #9fd3ed;
+  --medium-blue: #68a8e7;
 }
 
 @theme inline {
@@ -47,6 +48,22 @@ body {
 
 .bg-purple {
   background-color: var(--purple);
+}
+
+.bg-medium-blue {
+  background-color: var(--medium-blue);
+}
+
+.border-clear-blue {
+  border-color: var(--clear-blue);
+}
+
+.border-purple {
+  border-color: var(--purple);
+}
+
+.border-medium-blue {
+  border-color: var(--medium-blue);
 }
 
 .title {

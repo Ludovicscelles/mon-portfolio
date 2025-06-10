@@ -3,6 +3,8 @@ export type Skill = {
   name: string;
   icon: string;
   description: string;
+  bgColor: string;
+  borderColor: string;
 };
 
 export type SkillCategory = {
