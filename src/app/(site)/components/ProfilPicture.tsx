@@ -17,7 +17,11 @@ export default function ProfilPicture({ size = "medium" }: Props) {
   return (
     <div className={`relative ${sizeClass} mb-10 md:ml-10`}>
       <div
-        className={`absolute bg-purple-10 -right-2 top-2 rounded-3xl z-0 ${size === "small" ? "w-40 h-40 md:-right-2 md:top-2" : "w-40 h-40 md:w-96 md:h-96 md:-right-4 md:top-4"}`}
+        className={`absolute bg-purple w-40 h-40 rounded-3xl -right-2 top-2 z-0 ${
+          size === "small"
+            ? "md:-right-2 md:top-2"
+            : "md:w-96 md:h-96 md:-right-3 md:top-3  "
+        }`}
       ></div>
       <div
         className={`relative border-2 border-[var(--purple)] rounded-3xl overflow-hidden z-10 ${size === "small" ? "w-40 h-40 md:border-2" : "w-40 h-40 md:w-96 md:h-96 md:border-3"} `}

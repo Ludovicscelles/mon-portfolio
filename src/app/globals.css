@@ -42,6 +42,10 @@ body {
   background-color: var(--gris-clair);
 }
 
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
 .bg-clear-blue {
   background-color: var(--clear-blue);
 }
