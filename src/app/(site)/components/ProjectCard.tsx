@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { Project } from "@/types/ProjectTypes";
 import { useEffect, useState } from "react";
-import { ArrowTopRightOnSquareIcon} from "@heroicons/react/24/outline";
+import { FaGithub } from "react-icons/fa6";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 type ProjectCardProps = {
   project: Project;
@@ -21,17 +22,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     return () => {
       window.removeEventListener("resize", checkMobile);
     };
-  });
+  }, []);
 
   const imageSrc = isMobile ? project.displayMobile : project.displayDesktop;
 
   return (
-    <div className="relative w-50 h-200 md:w-200 md:h-170 md:ml-10 md:mr-10 md:mb-10 ">
+    <div className="relative w-50   md:w-200 md:min-h-[550px] md:ml-10 md:mr-10 md:mb-10 ">
       <div
-        className={`absolute  w-50 h-200 ${project.bgColor ?? "bg-clear-blue"} -right-2 top-2 rounded-3xl md:-right-4 md:top-4 z-0 md:w-200 md:h-170`}
+        className={`absolute inset-0 translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4 rounded-3xl z-0 ${
+          project.bgColor ?? "bg-clear-blue"
+        }`}
       ></div>
       <div
-        className={`relative p-2 w-50 h-200 bg-white border-2 ${project.borderColor ?? "border-clear-blue"} rounded-3xl overflow-hidden z-10 md:w-200 md:h-170 md:border-3 md:p-2`}
+        className={`relative bg-white z-10 rounded-3xl border-2 p-4 ${
+          project.borderColor ?? "border-clear-blue"
+        }`}
       >
         <div className="flex flex-col items-center gap-5 md:gap-10 md:flex md:justify-center md:flex-row md:mt-5">
           <Image
@@ -55,7 +60,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="blue-text text-center font-bold text-xs md:text-xl mt-5 mb-5">
             {project.shortDescription}
           </h3>
-          <div className="text-xs md:text-base md:ml-5">
+          <div className="text-xs md:text-base md:ml-5 w-full break-words ">
             <p className="self-start mb-2">
               <span className="font-bold">Objectif : </span>
               {project.objective}
@@ -77,7 +82,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <span className="font-bold">Compétences clés du projet : </span>
               {project.keySkills}
             </p>
-            <div className="flex flex-wrap justify-start gap-2 md:gap-5 w-full">
+            <div className="flex flex-wrap justify-start gap-2 mt-3 md:gap-5 w-full">
               {project.skills.map((skill, index) => (
                 <div
                   className="bg-dark-blue text-white font-bold text-sm pl-3 pr-3 md:text-lg rounded-4xl mt-2"
@@ -87,10 +92,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 </div>
               ))}
             </div>
-            
-            <a className="flex items-center mt-5 blue-text font-bold" href={`${project.linkDemoOrDeployedSite}`}>
-              <ArrowTopRightOnSquareIcon className="h-5 w-5 mr-2" />
-              Voir en direct</a>
+            <div className="flex gap-x-50 mt-6 mb-6">
+              <a
+                className="flex items-end blue-text text-lg font-bold"
+                href={`${project.linkDemoOrDeployedSite}`}
+              >
+                <FaArrowUpRightFromSquare className="h-6 w-6 mr-2" />
+                <p className="translate-y-[5px]">Voir en direct</p>
+              </a>
+              <a
+                className="flex items-end blue-text text-lg font-bold"
+                href={`${project.linkCode}`}
+              >
+                <FaGithub className="h-7 w-7 mr-2" />
+                <p className="translate-y-[5px]">Voir le code</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
