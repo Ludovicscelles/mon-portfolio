@@ -39,21 +39,25 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         }`}
       >
         <div className="flex flex-col items-center gap-5 md:gap-10 md:flex md:justify-center md:flex-row md:mt-5">
-          <Image
-            src={project.logo}
-            alt="Logo du projet"
-            width={isMobile ? 90 : 200 }
-            height={isMobile ? 90 : 200 }
-            className=""
-          />
+          <div className="relative w-[90px] md:w-[200px] aspect-square">
+            <Image
+              src={project.logo}
+              alt="Logo du projet"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 90px, 200px"
+            />
+          </div>
 
-          <Image
-            src={imageSrc}
-            alt="Page d'accueil du site"
-            width={isMobile ? 120 : 400 }
-            height={isMobile ? 120 : 400 }
-            className=""
-          />
+          <div className="relative w-[120px] md:w-[400px] aspect-[2/3] md:aspect-[16/9]">
+            <Image
+              src={imageSrc}
+              alt="Page d'accueil du site"
+              fill
+              className="object-contain"
+              sizes="(max-width: 768px) 120px, 400px"
+            />
+          </div>
         </div>
 
         <div className="flex flex-col items-center">
