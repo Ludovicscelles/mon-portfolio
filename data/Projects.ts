@@ -1,22 +1,4 @@
-export type Feature = {
-  title: string;
-  description: string;
-};
-
-export type Project = {
-  id: string;
-  name: string;
-  logo: string;
-  displayDesktop: string;
-  displayMobile: string;
-  shortDescription: string;
-  objective: string;
-  features: Feature[];
-  keySkills: string;
-  skills: string[];
-  linkDemoOrDeployedSite?: string;
-  linkCode: string;
-};
+import { Project } from "@/types/ProjectTypes";
 
 export const projects: Project[] = [
   {
@@ -30,21 +12,21 @@ export const projects: Project[] = [
       "Développer une application de comptabilité pour une association sportive",
     features: [
       {
-        title: "Gestion des catégories :",
+        title: "Gestion des catégories : ",
         description:
           "consultation, ajout et modification des catégories et sous-catégories.",
       },
       {
-        title: "Suivi des budgets :",
+        title: "Suivi des budgets : ",
         description:
           "visualisation en temps réel de l’état des budgets par commission.",
       },
       {
-        title: "Validation des factures :",
+        title: "Validation des factures : ",
         description: "contrôle et approbation des factures.",
       },
       {
-        title: "Invalidation des factures :",
+        title: "Invalidation des factures : ",
         description:
           "possibilité d’invalider une facture avec envoi automatique d’un e-mail au responsable de la commission concernée.",
       },
@@ -66,6 +48,8 @@ export const projects: Project[] = [
     ],
     linkCode:
       "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-2-Team-D",
+    bgColor: "bg-clear-blue",
+    borderColor: "border-clear-blue",
   },
   {
     id: "thrillermania",
@@ -78,17 +62,17 @@ export const projects: Project[] = [
       "Créer une plateforme communautaire dédiée aux amateurs de thrillers.",
     features: [
       {
-        title: "Visualisation des films tendances :",
+        title: "Visualisation des films tendances : ",
         description:
           "un carrousel affichant les 3 thrillers les plus populaires du dernier mois.",
       },
       {
-        title: "Affichage de films récents et locaux :",
+        title: "Affichage de films récents et locaux : ",
         description:
           "sélections et présentation des 4 films les plus récents et de 4 films français sur la page d’accueil.",
       },
       {
-        title: "Gestion des résultats de recherche :",
+        title: "Gestion des résultats de recherche : ",
         description:
           "affichage optimisé et filtré des films en fonction des recherches des utilisateurs.",
       },
@@ -106,6 +90,8 @@ export const projects: Project[] = [
     ],
     linkCode:
       "https://github.com/Ludovicscelles/JS-CDA-Projet-1-Team-B-Thriller-Mania",
+    bgColor: "bg-purple",
+    borderColor: "border-purple",
   },
   {
     id: "swap-it",
@@ -118,22 +104,22 @@ export const projects: Project[] = [
       "Développer une plateforme d’échange dédiée au troc de matériel IT entre utilisateurs.",
     features: [
       {
-        title: "Gestion des catégories :",
+        title: "Gestion des catégories : ",
         description:
           "affichage des produits par catégories pour une navigation simplifiée.",
       },
       {
-        title: "Recherche avancée :",
+        title: "Recherche avancée : ",
         description:
           "création d’une barre de recherche pour trouver facilement un modèle ou une catégorie de produits.",
       },
       {
-        title: "Ajout de produit :",
+        title: "Ajout de produit : ",
         description:
           "mise en place d’un formulaire pour permettre aux utilisateurs de créer des fiches produits.",
       },
       {
-        title: "Mise en place des échanges (swap) :",
+        title: "Mise en place des échanges (swap) : ",
         description:
           "fonctionnalité permettant à deux utilisateurs connectés d’échanger leurs produits.",
       },
@@ -143,6 +129,8 @@ export const projects: Project[] = [
     skills: ["React", "MySQL", "Node", "Express", "Figma", "Agile Scrum"],
     linkCode:
       "https://github.com/WildCodeSchool-2024-02/JS-Paris-BrainWaves-P3-Swapit",
+    bgColor: "bg-medium-blue",
+    borderColor: "border-medium-blue",
   },
 
   {
@@ -156,12 +144,12 @@ export const projects: Project[] = [
       "Développer un guide interactif pour les joueurs du jeu Donjons & Dragons, qu’ils soient débutants ou expérimentés.",
     features: [
       {
-        title: "Règles du jeu :",
+        title: "Règles du jeu : ",
         description:
           "affichage des règles par catégorie accessibles via des boutons pour une navigation simplifiée.",
       },
       {
-        title: "Recherche des monstres :",
+        title: "Recherche des monstres : ",
         description:
           "mise en place d’une barre de recherche pour filtrer rapidement les créatures sur la page “Bestiary”.",
       },
@@ -172,6 +160,8 @@ export const projects: Project[] = [
     linkDemoOrDeployedSite: "https://wcs-p2-wizard-castle.vercel.app/",
     linkCode:
       "https://github.com/WildCodeSchool-2024-02/JS-Paris-BrainWaves-P2-WizardCastle",
+    bgColor: "bg-clear-blue",
+    borderColor: "border-clear-blue",
   },
   {
     id: "back-to-the-cine",
@@ -184,12 +174,12 @@ export const projects: Project[] = [
       "Développer un site pour un cinéma atypique, dédié aux films cultes des années 80.",
     features: [
       {
-        title: "Page de programmation :",
+        title: "Page de programmation : ",
         description:
           "conception d’une page détaillant la programmation avec affichage des titres, descriptions et affiches des films.",
       },
       {
-        title: "Éléments dynamiques :",
+        title: "Éléments dynamiques : ",
         description:
           "ajout des horaires des séances et des liens vers les bandes-annonces pour une expérience utilisateur plus immersive.",
       },
@@ -199,5 +189,7 @@ export const projects: Project[] = [
     linkDemoOrDeployedSite:
       "https://nicosmq.github.io/Projet-1-Back-To-The-Cine/",
     linkCode: "https://github.com/Ludovicscelles/Projet-1-Back-To-The-Cine",
+    bgColor: "bg-purple",
+    borderColor: "border-purple",
   },
 ];
