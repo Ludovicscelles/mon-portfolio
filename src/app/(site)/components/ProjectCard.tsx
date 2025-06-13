@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const imageSrc = isMobile ? project.displayMobile : project.displayDesktop;
 
   return (
-    <div className="relative w-50   md:w-200 md:min-h-[550px] md:ml-10 md:mr-10 md:mb-10 ">
+    <article className="relative w-50   md:w-200 md:min-h-[550px] md:ml-10 md:mr-10 md:mb-10 ">
       <div
         className={`absolute inset-0 translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4 rounded-3xl z-0 ${
           project.bgColor ?? "bg-clear-blue"
@@ -42,16 +42,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <Image
             src={project.logo}
             alt="Logo du projet"
-            width={`${isMobile ? 90 : 200}`}
-            height={`${isMobile ? 90 : 200}`}
+            width={isMobile ? 90 : 200 }
+            height={isMobile ? 90 : 200 }
             className=""
           />
 
           <Image
             src={imageSrc}
             alt="Page d'accueil du site"
-            width={`${isMobile ? 120 : 400}`}
-            height={400}
+            width={isMobile ? 120 : 400 }
+            height={isMobile ? 120 : 400 }
             className=""
           />
         </div>
@@ -67,7 +67,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </p>
             <p>
               <span className="font-bold mb-2 md:mb-5">
-                Fontionnalités développées :{" "}
+                Fonctionnalités développées :{" "}
               </span>
             </p>
             <ul className="list-disc mb-2 ml-2 md:ml-5 ">
@@ -85,32 +85,36 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div className="flex flex-wrap justify-start gap-2 mt-3 md:gap-5 w-full">
               {project.skills.map((skill, index) => (
                 <div
-                  className="bg-dark-blue text-white font-bold text-sm pl-3 pr-3 md:text-lg rounded-4xl mt-2"
+                  className="bg-dark-blue text-white font-bold text-xs pl-3 pr-3 md:text-lg rounded-4xl mt-2"
                   key={index}
                 >
                   {skill}
                 </div>
               ))}
             </div>
-            <div className="flex gap-x-50 mt-6 mb-6">
+            <div className="flex flex-col gap-y-10 md:gap-x-50 mt-6 mb-6 md:flex-row">
               <a
-                className="flex items-end blue-text text-lg font-bold"
+                className="flex items-end blue-text text-xs  md:text-lg font-bold"
                 href={`${project.linkDemoOrDeployedSite}`}
               >
-                <FaArrowUpRightFromSquare className="h-6 w-6 mr-2" />
-                <p className="translate-y-[5px]">Voir en direct</p>
+                <FaArrowUpRightFromSquare className="h-4 w-4 md:h-6 w-6 mr-2" />
+                <p className="translate-y-[3px] md:translate-y-[5px]">
+                  Voir en direct
+                </p>
               </a>
               <a
-                className="flex items-end blue-text text-lg font-bold"
+                className="flex items-end blue-text text-xs md:text-lg font-bold"
                 href={`${project.linkCode}`}
               >
-                <FaGithub className="h-7 w-7 mr-2" />
-                <p className="translate-y-[5px]">Voir le code</p>
+                <FaGithub className="h-5 w-5 md:h-7 w-7 mr-2" />
+                <p className="translate-y-[3px] md:translate-y-[5px]">
+                  Voir le code
+                </p>
               </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }
