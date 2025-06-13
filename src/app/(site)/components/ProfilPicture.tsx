@@ -14,6 +14,11 @@ export default function ProfilPicture({ size = "medium" }: Props) {
 
   const sizeClass = sizes[size];
 
+  const imageSizes =
+    size === "small"
+      ? "(max-width: 768px) 100vw, 160px"
+      : "(max-width: 768px) 100vw, 384px";
+
   return (
     <div className={`relative ${sizeClass} mb-10 md:ml-10`}>
       <div
@@ -30,6 +35,7 @@ export default function ProfilPicture({ size = "medium" }: Props) {
           src="/images/profil/ludovic2.png"
           alt="Photo de Ludovic Scelles"
           fill
+          sizes={imageSizes}
           className="object-cover"
         />
       </div>
