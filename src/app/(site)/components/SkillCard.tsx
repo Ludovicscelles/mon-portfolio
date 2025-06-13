@@ -21,15 +21,16 @@ export default function SkillCard({ skills }: SkillCardProps) {
           <div
             className={`relative bg-white border ${skill.borderColor ?? "border-clear-blue"} rounded-[50px] overflow-hidden z-10 w-60 h-32 flex items-center justify-center`}
           >
-            <div className="w-full px-4 text-center">
+            <div className="flex flex-col items-center justify-center text-center h-full p-4">
+            <div className="relative w-12 h-12 mx-auto">
               <Image
                 src={skill.icon}
                 alt={`Logo de la compétence ${skill.name}`}
-                width={45}
-                height={45}
-                className="object-contain mx-auto"
+                fill
+                className="object-contain"
               />
-              <p className="text-xs font-bold justify-center mt-2">
+              </div>
+              <p className="text-xs font-bold  mt-2">
                 {skill.description}
               </p>
             </div>
