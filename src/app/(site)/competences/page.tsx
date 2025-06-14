@@ -13,9 +13,8 @@ export default function Competences() {
           <h2 className="title blue-text text-2xl md:text-4xl font-semibold text-center mt-5 md:mt-30 mb-10 md:mb-10">
             {category.category}
           </h2>
-          <div className="mb-10 md:ml-10 md:mr-10
-          ">
-          <SkillCard skills={category.skills} />
+          <div className="flex justify-center">
+            <SkillCard skills={category.skills} />
           </div>
         </div>
       ))}

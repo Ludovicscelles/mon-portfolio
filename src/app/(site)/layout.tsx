@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`bg-gris-moyen min-h-screen ${geistSans.variable} ${geistMono.variable} flex justify-center p-10`}
       >
         <div
-          className="w-fit h-fit p-[10px] md:p-[20px] rounded-3xl mt-10 "
+          className="w-full max-w-[1300px] p-[10px] md:p-[20px] rounded-3xl mt-10"
           style={{ backgroundImage: 'url("/texture2.svg")' }}
         >
           <div className={`bg-gris-clair rounded-xl p-5`}>
