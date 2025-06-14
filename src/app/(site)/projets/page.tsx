@@ -4,17 +4,22 @@ import ProjectCard from "../components/ProjectCard";
 export default function Project() {
   return (
     <div>
+      <h1 className="title blue-text text-2xl md:text-6xl font-bold text-center mt-5 md:mt-30 mb-5 md:mb-20">
+        Mes Projets
+      </h1>
       {projects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
+        <div key={project.id}>
+          <h2 className="title blue-text text-2xl md:text-4xl font-semibold text-center mt-5 md:mt-30 mb-10 md:mb-10">
+            {project.name}
+          </h2>
+          <div
+            className="mb-10 md:ml-10 md:mr-10
+              "
+          >
+            <ProjectCard key={project.id} project={project} />
+          </div>
+        </div>
       ))}
-
-      <h1>Project</h1>
-      <p>Here you can find the project details.</p>
-      <ul>
-        <li>Project 1</li>
-        <li>Project 2</li>
-        <li>Project 3</li>
-      </ul>
     </div>
   );
 }
