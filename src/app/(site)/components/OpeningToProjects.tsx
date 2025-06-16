@@ -19,9 +19,9 @@ export default function OpeningToProjects() {
   }, []);
 
   return (
-    <div className="relative w-[32vw] h-[45vh] md:ml-10 md:mr-10 md:mb-10 ">
-      <div className="absolute  w-[32vw] h-[45vh] bg-clear-blue -right-2 top-2 rounded-3xl md:-right-3 md:top-3 z-0"></div>
-      <div className="relative w-[32vw] h-[45vh] border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
+    <div className="relative w-[32vw] h-[45vh] md:min-h-96 md:ml-10 md:mr-10 md:mb-10 ">
+      <div className="absolute  w-[32vw] h-[45vh] md:min-h-96 bg-clear-blue -right-2 top-2 rounded-3xl md:-right-3 md:top-3 z-0"></div>
+      <div className="relative w-[32vw] h-[45vh] md:min-h-96 border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
         <Image
           src={
             isMobile

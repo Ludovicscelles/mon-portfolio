@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const imageSrc = isMobile ? project.displayMobile : project.displayDesktop;
 
   return (
-    <article className="relative w-50   md:w-200 md:min-h-[550px] md:ml-10 md:mr-10 md:mb-10 ">
+    <article className="relative w-[50vw] md:ml-10 md:mr-10 md:mb-10 ">
       <div
         className={`absolute inset-0 translate-x-2 translate-y-2 md:translate-x-4 md:translate-y-4 rounded-3xl z-0 ${
           project.bgColor ?? "bg-clear-blue"
