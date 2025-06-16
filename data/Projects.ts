@@ -46,6 +46,7 @@ export const projects: Project[] = [
       "Figma",
       "Agile Scrum",
     ],
+    linkDemoOrDeployedSite: "https://predeploy.students-cda-js-4.wilders.dev/",
     linkCode:
       "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-2-Team-D",
     bgColor: "bg-clear-blue",
