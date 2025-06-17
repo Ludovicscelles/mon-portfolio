@@ -28,12 +28,12 @@ export default function IntroPage() {
   return (
     <div
       onClick={handleClick}
-      className="w-screen h-screen cursor-pointer flex justify-center items-center bg-black"
+      className="w-screen h-screen cursor-pointer flex justify-center items-center"
     >
       <Image
         src={isMobile ? ImageWebDevMobile : ImageWebDev}
         alt="Entrez sur le site"
-        className="w-full h-full object-cover"
+        className="w-full h-full md:w-[80%] object-cover"
         priority
       />
       {isMobile ? (
