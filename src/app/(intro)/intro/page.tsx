@@ -33,7 +33,7 @@ export default function IntroPage() {
       <Image
         src={isMobile ? ImageWebDevMobile : ImageWebDev}
         alt="Entrez sur le site"
-        className="w-full h-full md:w-[80%] object-cover"
+        className="w-full h-auto object-contain md:w-[80%] "
         priority
       />
       {isMobile ? (
