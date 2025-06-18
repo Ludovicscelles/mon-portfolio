@@ -1,6 +1,9 @@
+import ContactForm from "../components/ContactForm";
+
 export default function Contact() {
   return (
     <div>
+      <ContactForm />
       <h1>Contact</h1>
       <p>Here you can find the contact details of the project.</p>
       <ul>
