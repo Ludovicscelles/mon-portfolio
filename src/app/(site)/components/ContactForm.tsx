@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function ContactForm() {
   const [firstname, setFirstname] = useState("");
@@ -17,7 +18,21 @@ export default function ContactForm() {
   const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) =>
     setMessage(e.target.value);
 
+  const isValidEmail = /^\S+@\S+\.\S+$/.test(email);
   const handleSubmit = () => {
+    if (!firstname || !lastname || !email || !message) {
+      toast.warning("Si vous pouvez remplir tous le champs ?");
+      return;
+    }
+    if (!isValidEmail) {
+      toast.warning("Email invalide.");
+      return;
+    }
+    try {
+      toast.success("Message envoyé");
+    } catch {
+      toast.error("Erreur lors de l'envoi");
+    }
     console.log({ firstname, lastname, email, message });
   };
 
@@ -36,6 +51,7 @@ export default function ContactForm() {
           className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
           id="firstname"
           type="text"
+          maxLength={30}
           placeholder="Prénom"
           value={firstname}
           onChange={handleFirstname}
@@ -44,6 +60,7 @@ export default function ContactForm() {
           className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
           id="lastname"
           type="text"
+          maxLength={30}
           placeholder="Nom"
           value={lastname}
           onChange={handleLastname}
@@ -52,6 +69,7 @@ export default function ContactForm() {
           className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
           id="email"
           type="text"
+          maxLength={100}
           placeholder="Email"
           value={email}
           onChange={handleEmail}
@@ -60,6 +78,7 @@ export default function ContactForm() {
           <textarea
             className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full h-full pt-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue align-top resize-none"
             id="message"
+            maxLength={500}
             placeholder="message"
             value={message}
             onChange={handleMessage}
