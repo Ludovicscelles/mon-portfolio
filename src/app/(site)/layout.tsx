@@ -4,6 +4,8 @@ import "../../app/globals.css";
 import Header from "../(site)/components/Header";
 import BurgerMenu from "../(site)/components/BurgerMenu";
 
+import { ToastContainer } from "react-toastify";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,6 +41,7 @@ export default function RootLayout({
             {children}
           </div>
         </div>
+        <ToastContainer />
       </body>
     </html>
   );

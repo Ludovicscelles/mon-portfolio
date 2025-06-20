@@ -84,6 +84,11 @@ body {
 
 a.blue-text:hover {
   color: black;
+  
+}
+
+.placeholder-blue::placeholder {
+  color: var(--dark-blue);
 }
 
 /* .border-frame {
