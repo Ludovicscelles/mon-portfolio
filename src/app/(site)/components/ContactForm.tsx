@@ -33,17 +33,16 @@ export default function ContactForm() {
     try {
       emailjs
         .sendForm(
-          "service_ixos4yq",
-          "template_l91msqb",
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
           e.target as HTMLFormElement,
-          "Gpg9loaQKM2uL5exY"
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
         )
         .then(() => toast("Message envoyé"))
         .catch(() => toast("Erreur lors de lenvoi"));
     } catch {
       toast.error("Erreur lors de l'envoi");
     }
-    console.log({ firstname, lastname, email, message });
   };
 
   const handleClose = () => {
