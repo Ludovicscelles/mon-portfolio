@@ -1,9 +1,22 @@
+"use client"
+
+import ContactBlock from "../components/ContactBlock";
 import ContactForm from "../components/ContactForm";
+import { useState } from "react";
 
 export default function Contact() {
+  const [showForm, setShowForm] = useState(false);
+
+  const handleShowForm = () => {
+    setShowForm(true);
+  };
+
   return (
     <div>
-      <ContactForm />
+      <ContactBlock onClickContact={handleShowForm} />
+
+      {showForm && <ContactForm />}
+
       <h1>Contact</h1>
       <p>Here you can find the contact details of the project.</p>
       <ul>
