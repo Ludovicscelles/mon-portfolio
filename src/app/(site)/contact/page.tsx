@@ -11,11 +11,15 @@ export default function Contact() {
     setShowForm(true);
   };
 
+  const handleHideForm = () => {
+    setShowForm(false)
+  }
+
   return (
     <div>
       <ContactBlock onClickContact={handleShowForm} />
 
-      {showForm && <ContactForm />}
+      {showForm && <ContactForm onClose={handleHideForm}/>}
 
       <h1>Contact</h1>
       <p>Here you can find the contact details of the project.</p>

@@ -10,9 +10,9 @@ export default function ContactBlock({
   onClickContact: () => void;
 }) {
   return (
-    <div className="relative w-[40vw] h-[42vh] md:min-h-90 md:ml-10 md:mr-10 md:mb-10 ">
-      <div className="absolute  w-[40vw] h-[42vh] md:min-h-80 bg-clear-blue -right-2 top-2 rounded-3xl md:-right-3 md:top-3 z-0"></div>
-      <div className="relative w-[40vw] h-[42vh] text-xs md:text-lg font-bold md:min-h-80 p-2 md:p-4 bg-white border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
+    <div className="relative w-[40vw] h-[40vh] md:min-h-75 md:ml-10 md:mr-10 md:mb-10 ">
+      <div className="absolute  w-[40vw] h-[40vh] md:min-h-75 bg-clear-blue -right-2 top-2 rounded-3xl md:-right-3 md:top-3 z-0"></div>
+      <div className="relative w-[40vw] h-[40vh] text-xs md:text-lg font-bold md:min-h-75 p-2 md:p-4 bg-white border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
         {" "}
         <p className="mb-5">{contact.message}</p>
         <p className="mb-7">{contact.greeting}</p>
@@ -25,7 +25,7 @@ export default function ContactBlock({
           </a>
         </div>
         <div className="flex justify-center gap-x-30">
-          <div className="relative w-[5vw] h-[5vh]">
+          <div className="relative w-10 h-10">
             <a
               href={contact.linkedin}
               target="_blank"
@@ -40,7 +40,7 @@ export default function ContactBlock({
               />
             </a>
           </div>
-          <div className="relative w-[5vw] h-[5vh] mb-5">
+          <div className="relative w-10 h-10 mb-5">
             <a href={contact.github} target="_blank" rel="noonpener noreferrer">
               <Image
                 src={contact.iconGithub}
@@ -51,11 +51,11 @@ export default function ContactBlock({
             </a>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center">
           <a
             href="#contact-form"
             onClick={onClickContact}
-            className="bg-dark-blue h-[6vh] text-white font-bold text-base pl-3 pr-3 md:text-lg rounded-2xl mt-2"
+            className="flex justify-center items-center bg-dark-blue h-10 text-white font-bold text-base pl-3 pr-3 md:text-lg rounded-2xl mt-2"
           >
             {contact.messageButton}
           </a>
