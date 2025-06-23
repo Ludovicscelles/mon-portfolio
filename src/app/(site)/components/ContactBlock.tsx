@@ -10,9 +10,9 @@ export default function ContactBlock({
   onClickContact: () => void;
 }) {
   return (
-    <div className="relative w-[40vw] h-[40vh] md:min-h-75 md:ml-10 md:mr-10 md:mb-10 ">
-      <div className="absolute  w-[40vw] h-[40vh] md:min-h-75 bg-clear-blue -right-2 top-2 rounded-3xl md:-right-3 md:top-3 z-0"></div>
-      <div className="relative w-[40vw] h-[40vh] text-xs md:text-lg font-bold md:min-h-75 p-2 md:p-4 bg-white border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
+    <div className="relative w-[200px] md:w-[40vw] h-full md:min-h-[300px] md:ml-10 md:mr-10 md:mb-10 ">
+      <div className="absolute w-[200px] md:w-[40vw] h-full md:min-h-[300px] bg-clear-blue -right-2 top-2 rounded-3xl md:-right-3 md:top-3 z-0"></div>
+      <div className="relative w-[200px] md:w-[40vw] h-full text-xs md:text-lg font-bold md:min-h-[300px] p-2 md:p-4 bg-white border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
         {" "}
         <p className="mb-5">{contact.message}</p>
         <p className="mb-7">{contact.greeting}</p>
@@ -24,12 +24,12 @@ export default function ContactBlock({
             {contact.mail}
           </a>
         </div>
-        <div className="flex justify-center gap-x-30">
+        <div className="flex justify-center gap-x-[60px] md:gap-x-[120px]">
           <div className="relative w-10 h-10">
             <a
               href={contact.linkedin}
               target="_blank"
-              rel="noonpener noreferrer"
+              rel="noopener noreferrer"
               onClick={onClickContact}
             >
               <Image
@@ -41,7 +41,7 @@ export default function ContactBlock({
             </a>
           </div>
           <div className="relative w-10 h-10 mb-5">
-            <a href={contact.github} target="_blank" rel="noonpener noreferrer">
+            <a href={contact.github} target="_blank" rel="noopener noreferrer">
               <Image
                 src={contact.iconGithub}
                 alt="logo de gitHub"
