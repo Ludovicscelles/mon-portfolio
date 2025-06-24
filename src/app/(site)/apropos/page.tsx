@@ -8,7 +8,7 @@ export default function About() {
         À propos de moi
       </h1>
       <div className="flex flex-col items-center md:flex-row md:items-start">
-        <ProfilPicture size="small" />
+        <ProfilPicture size="small" source="/images/profil/ludovic2.png" />
         <Presentation />
       </div>
     </div>
