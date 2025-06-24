@@ -4,9 +4,10 @@ import Image from "next/image";
 
 type Props = {
   size?: "small" | "medium";
+  source: string
 };
 
-export default function ProfilPicture({ size = "medium" }: Props) {
+export default function ProfilPicture({ size = "medium", source }: Props) {
   const sizes = {
     small: "w-40 h-40",
     medium: "w-40 h-40 md:w-96 md:h-96",
@@ -32,7 +33,7 @@ export default function ProfilPicture({ size = "medium" }: Props) {
         className={`relative border-2 border-[var(--purple)] rounded-3xl overflow-hidden z-10 ${size === "small" ? "w-40 h-40 md:border-2" : "w-40 h-40 md:w-96 md:h-96 md:border-3"} `}
       >
         <Image
-          src="/images/profil/ludovic2.png"
+          src={source}
           alt="Photo de Ludovic Scelles"
           fill
           sizes={imageSizes}
