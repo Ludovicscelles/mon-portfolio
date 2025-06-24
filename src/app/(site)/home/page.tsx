@@ -9,9 +9,9 @@ export default function Home() {
         <span className="block md:inline">Ludovic</span>
         <span className="block md:inline"> Scelles</span>
       </h1>
-      <div className="inline-block md:flex">
+      <div className="flex flex-col items-center md:flex-row md:items-start">
         <Link href="/apropos">
-          <ProfilPicture />
+          <ProfilPicture source="/images/profil/ludovic2.png" />
         </Link>
         <Link href="/projets">
         <OpeningToProjects />
