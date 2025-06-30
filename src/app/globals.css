@@ -5,8 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --gris-moyen: #efefed;
-  --gris-clair: #f5f5f5;
+  --medium-gray: #efefed;
+  --clear-gray: #f5f5f5;
   --dark-blue: #0b467e;
   --purple: #989efa;
   --clear-blue: #9fd3ed;
@@ -34,12 +34,12 @@ body {
   /* font-family: "Reddit Sans", sans-serif; */
 }
 
-.bg-gris-moyen {
-  background-color: var(--gris-moyen);
+.bg-medium-gray {
+  background-color: var(--medium-gray)
 }
 
-.bg-gris-clair {
-  background-color: var(--gris-clair);
+.bg-clear-gray {
+  background-color: var(--clear-gray)
 }
 
 .bg-dark-blue {

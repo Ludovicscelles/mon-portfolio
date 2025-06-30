@@ -13,7 +13,7 @@ export default function IntroLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="bg-gris-moyen text-white">{children}</body>
+      <body className="bg-medium-gray text-white">{children}</body>
     </html>
   );
 }

@@ -60,7 +60,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         onSubmit={handleSubmit}
       >
         <input
-          className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
+          className="shadow appearance-none bg-clear-gray text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
           id="firstname"
           name="firstname"
           type="text"
@@ -70,7 +70,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           onChange={handleFirstname}
         />
         <input
-          className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
+          className="shadow appearance-none bg-clear-gray text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
           id="lastname"
           name="lastname"
           type="text"
@@ -80,7 +80,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           onChange={handleLastname}
         />
         <input
-          className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
+          className="shadow appearance-none bg-clear-gray text-xs md:text-base font-bold rounded w-full py-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue"
           id="email"
           name="email"
           type="text"
@@ -91,7 +91,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
         />
         <div className="w-full h-[15vh]">
           <textarea
-            className="shadow appearance-none bg-gris-clair text-xs md:text-base font-bold rounded w-full h-full pt-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue align-top resize-none"
+            className="shadow appearance-none bg-clear-gray text-xs md:text-base font-bold rounded w-full h-full pt-2 px-3 blue-text leading-tight focus:outline-none focus:shadow-outline placeholder:font-normal placeholder-blue align-top resize-none"
             id="message"
             name="message"
             maxLength={500}
@@ -107,7 +107,7 @@ export default function ContactForm({ onClose }: { onClose: () => void }) {
           Envoyer
         </button>
         <button
-          className="bg-gris-moyen hover:bg-blue-700 blue-text text-xs md:text-base font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline active:scale-95 transition-transform"
+          className="bg-medium-gray hover:bg-blue-700 blue-text text-xs md:text-base font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline active:scale-95 transition-transform"
           onClick={handleClose}
         >
           Fermer
