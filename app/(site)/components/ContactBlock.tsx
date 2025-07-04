@@ -12,7 +12,7 @@ export default function ContactBlock({
   return (
     <div className="relative w-[200px] md:w-[40vw] h-full md:min-h-[300px] md:ml-10 md:mr-10 md:mb-10 ">
       <div className="absolute w-[200px] md:w-[40vw] h-full md:min-h-[300px] bg-clear-blue -right-2 top-2 rounded-3xl md:-right-3 md:top-3 z-0"></div>
-      <div className="relative w-[200px] md:w-[40vw] h-full text-xs md:text-lg font-bold md:min-h-[300px] p-2 md:p-3 bg-white border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
+      <div className="text-black relative w-[200px] md:w-[40vw] h-full text-xs md:text-lg font-bold md:min-h-[300px] p-2 md:p-3 bg-white border-2 border-[var(--clear-blue)] rounded-3xl overflow-hidden z-10 md:border-3">
         {" "}
         <p className="mb-5">{contact.message}</p>
         <p className="mb-7">{contact.greeting}</p>

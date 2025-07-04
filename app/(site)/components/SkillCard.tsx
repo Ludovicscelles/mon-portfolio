@@ -30,7 +30,7 @@ export default function SkillCard({ skills }: SkillCardProps) {
                   className="object-contain"
                 />
               </div>
-              <p className="text-sm sm:text-xs lg:text-sm font-bold  mt-2">
+              <p className="text-black text-sm sm:text-xs lg:text-sm font-bold  mt-2">
                 {skill.description}
               </p>
             </div>

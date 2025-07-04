@@ -60,7 +60,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
 
-        <div className="flex flex-col items-center">
+        <div className="text-black flex flex-col items-center">
           <h3 className="blue-text text-center font-bold text-xs md:text-xl mt-5 mb-5">
             {project.shortDescription}
           </h3>
