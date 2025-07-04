@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Skill } from "@/types/SkillTypes";
+import { Skill } from "../../../types/SkillTypes";
 
 type SkillCardProps = {
   skills: Skill[];
@@ -11,7 +11,10 @@ export default function SkillCard({ skills }: SkillCardProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 md:gap-8">
       {skills.map((skill) => (
-        <div key={skill.id} className="relative w-full max-w-70 h-40 md:mb-10 mx-auto">
+        <div
+          key={skill.id}
+          className="relative w-full max-w-70 h-40 md:mb-10 mx-auto"
+        >
           <div
             className={`absolute ${skill.bgColor ?? "bg-clear-blue"} -right-2 top-2 rounded-[50px] md:-right-2 md:top-2 z-0 w-full h-full`}
           ></div>
@@ -27,7 +30,9 @@ export default function SkillCard({ skills }: SkillCardProps) {
                   className="object-contain"
                 />
               </div>
-              <p className="text-sm sm:text-xs lg:text-sm font-bold  mt-2">{skill.description}</p>
+              <p className="text-sm sm:text-xs lg:text-sm font-bold  mt-2">
+                {skill.description}
+              </p>
             </div>
           </div>
         </div>

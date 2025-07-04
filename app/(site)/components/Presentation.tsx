@@ -1,5 +1,5 @@
 "use client";
-import { about } from "../../../../data/About";
+import { about } from "../../../data/About";
 
 export default function Presentation() {
   return (

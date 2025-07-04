@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import ImageOpeningToProjectDesktop from "../../../../public/sections/displayDesktopOpeningToProjects.svg";
-import ImageOpeningToProjectMobile from "../../../../public/sections/displayMobileOpeningToProjects.svg";
+import ImageOpeningToProjectDesktop from "../../../public/sections/displayDesktopOpeningToProjects.svg";
+import ImageOpeningToProjectMobile from "../../../public/sections/displayMobileOpeningToProjects.svg";
 import { useEffect, useState } from "react";
 
 export default function OpeningToProjects() {
