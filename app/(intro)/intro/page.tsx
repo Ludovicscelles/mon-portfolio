@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import ImageWebDev from "../../../../public/web_dev_desktop.png";
-import ImageWebDevMobile from "../../../../public/web_dev_mobile.svg";
+import ImageWebDev from "../../../public/web_dev_desktop.png";
+import ImageWebDevMobile from "../../../public/web_dev_mobile.svg";
 import { useEffect, useState } from "react";
 
 export default function IntroPage() {

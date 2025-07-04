@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Project } from "@/types/ProjectTypes";
+import { Project } from "../../../types/ProjectTypes";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa6";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";

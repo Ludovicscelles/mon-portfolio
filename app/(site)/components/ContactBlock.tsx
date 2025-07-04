@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { contact } from "../../../../data/Contact";
+import { contact } from "../../../data/Contact";
 
 export default function ContactBlock({
   onClickContact,

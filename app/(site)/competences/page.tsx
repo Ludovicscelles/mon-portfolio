@@ -1,5 +1,5 @@
 "use client";
-import { skills } from "../../../../data/Skills";
+import { skills } from "../../../data/Skills";
 import SkillCard from "../components/SkillCard";
 
 export default function Competences() {
