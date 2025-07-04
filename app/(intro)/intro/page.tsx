@@ -33,15 +33,15 @@ export default function IntroPage() {
       <Image
         src={isMobile ? ImageWebDevMobile : ImageWebDev}
         alt="Entrez sur le site"
-        className="w-full h-auto object-contain md:w-[80%] "
+        className="text-black w-full h-auto object-contain md:w-[80%] "
         priority
       />
       {isMobile ? (
-        <div className="absolute texte-black text-xl md:text-3xl font-semibold animate-pulse pointer-events-none">
+        <div className="absolute text-black text-xl md:text-3xl font-semibold animate-pulse pointer-events-none">
           Entrez ici
         </div>
       ) : (
-        <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black text-xl md:text-3xl font-semibold animate-pulse pointer-events-none">
+        <div className="absolute text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-black text-xl md:text-3xl font-semibold animate-pulse pointer-events-none">
           Cliquez ici 🖱️
         </div>
       )}

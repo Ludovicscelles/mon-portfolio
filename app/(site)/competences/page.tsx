@@ -14,7 +14,7 @@ export default function Competences() {
             {category.category}
           </h2>
           <div
-            className="mb-10 md:ml-10 md:mr-10
+            className="text-black mb-10 md:ml-10 md:mr-10
           "
           >
             <SkillCard skills={category.skills} />
