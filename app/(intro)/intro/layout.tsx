@@ -11,9 +11,5 @@ export default function IntroLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="fr">
-      <body className="bg-medium-gray text-white">{children}</body>
-    </html>
-  );
+  return <div className="bg-medium-gray text-white">{children}</div>;
 }
