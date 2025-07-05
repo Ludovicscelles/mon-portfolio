@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../../app/globals.css";
 import Header from "../(site)/components/Header";
 import BurgerMenu from "../(site)/components/BurgerMenu";
 
 import { ToastContainer } from "react-toastify";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,22 +16,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`bg-medium-gray min-h-screen ${geistSans.variable} ${geistMono.variable} flex justify-center p-10`}
+    <div className="bg-medium-gray min-h-screen  flex justify-center p-10">
+      <div
+        className="w-fit h-fit p-[10px] md:p-[20px] rounded-3xl mt-10 "
+        style={{ backgroundImage: 'url("/texture2.svg")' }}
       >
-        <div
-          className="w-fit h-fit p-[10px] md:p-[20px] rounded-3xl mt-10 "
-          style={{ backgroundImage: 'url("/texture2.svg")' }}
-        >
-          <div className={`bg-clear-gray rounded-xl p-5`}>
-            <Header></Header>
-            <BurgerMenu></BurgerMenu>
-            {children}
-          </div>
+        <div className={`bg-clear-gray rounded-xl p-5`}>
+          <Header></Header>
+          <BurgerMenu></BurgerMenu>
+          <ToastContainer />
+          {children}
         </div>
-        <ToastContainer />
-      </body>
-    </html>
+      </div>
+    </div>
   );
 }
