@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <h3 className="blue-text text-center font-bold text-xs md:text-xl mt-5 mb-5">
             {project.shortDescription}
           </h3>
-          <div className="text-xs md:text-base md:ml-5 w-full break-words ">
+          <div className="text-xs md:text-base md:ml-5 w-full break-words pr-4 ">
             <p className="self-start mb-2">
               <span className="font-bold">Objectif : </span>
               {project.objective}

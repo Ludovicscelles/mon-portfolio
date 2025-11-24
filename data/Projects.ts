@@ -9,7 +9,7 @@ export const projects: Project[] = [
     displayMobile: "/images/projects/displayMobileClubCompta.svg",
     shortDescription: "Application de Comptabilité",
     objective:
-      "Développer une application de comptabilité pour une association sportive",
+      "Développer, au sein d'une équipe de quatre personnes, une application de comptabilité pour une association sportive",
     features: [
       {
         title: "Gestion des catégories : ",
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     displayMobile: "/images/projects/displayMobileThrillerMania.svg",
     shortDescription: "Bibliothèque de films participative",
     objective:
-      "Créer une plateforme communautaire dédiée aux amateurs de thrillers.",
+      "Concevoir, au sein d'un équipe de quatre personnes, une plateforme communautaire dédiée aux amateurs de thrillers.",
     features: [
       {
         title: "Visualisation des films tendances : ",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     displayMobile: "/images/projects/displayMobileSwapIt.svg",
     shortDescription: "Site d’échanges de matériel IT",
     objective:
-      "Développer une plateforme d’échange dédiée au troc de matériel IT entre utilisateurs.",
+      "Développer, au seins d'une équipe de quatre personnes, une plateforme d’échange dédiée au troc de matériel IT entre utilisateurs.",
     features: [
       {
         title: "Gestion des catégories : ",
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     displayMobile: "/images/projects/displayMobileWizardCastle.svg",
     shortDescription: "Guide pour le jeu Donjons & Dragons",
     objective:
-      "Développer un guide interactif pour les joueurs du jeu Donjons & Dragons, qu’ils soient débutants ou expérimentés.",
+      "Développer, au sein d'une équipe de quatre personnes, un guide interactif pour les joueurs du jeu Donjons & Dragons, qu’ils soient débutants ou expérimentés.",
     features: [
       {
         title: "Règles du jeu : ",
@@ -172,7 +172,7 @@ export const projects: Project[] = [
     displayMobile: "/images/projects/displayMobileBackToTheCine.svg",
     shortDescription: "Site de programmation d’une salle de cinéma",
     objective:
-      "Développer un site pour un cinéma atypique, dédié aux films cultes des années 80.",
+      "Développer, au sein d'une équipe de deux personnes, un site pour un cinéma atypique dédié aux films cultes des années\u00A080.",
     features: [
       {
         title: "Page de programmation : ",
