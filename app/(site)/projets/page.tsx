@@ -1,6 +1,7 @@
 import { projects } from "../../../data/Projects";
 import ProjectCard from "../components/ProjectCard";
 
+
 export default function Project() {
   return (
     <div>
