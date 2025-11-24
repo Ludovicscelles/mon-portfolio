@@ -60,7 +60,7 @@ export const projects: Project[] = [
     displayMobile: "/images/projects/displayMobileThrillerMania.svg",
     shortDescription: "Bibliothèque de films participative",
     objective:
-      "Concevoir, au sein d'un équipe de quatre personnes, une plateforme communautaire dédiée aux amateurs de thrillers.",
+      "Concevoir, au sein d'une équipe de quatre personnes, une plateforme communautaire dédiée aux amateurs de thrillers.",
     features: [
       {
         title: "Visualisation des films tendances : ",
