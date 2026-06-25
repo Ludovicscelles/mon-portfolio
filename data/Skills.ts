@@ -91,7 +91,7 @@ export const skills: SkillCategory[] = [
       {
         id: "typeorm",
         name: "TypeORM",
-        icon: "/images/skills/logoTypeORM.svg",
+        icon: "/images/skills/logoTypeORM2.svg",
         description:
           "TypeORM pour manipuler une BDD avec une approche orientée object en TypeScript.",
         bgColor: "bg-purple",
