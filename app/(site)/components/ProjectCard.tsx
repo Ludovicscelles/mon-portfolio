@@ -97,15 +97,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               ))}
             </div>
             <div className="flex flex-col gap-y-10 md:gap-x-50 mt-6 mb-6 md:flex-row">
-              <a
-                className="flex items-end blue-text text-xs  md:text-lg font-bold"
-                href={`${project.linkDemoOrDeployedSite}`}
-              >
-                <FaArrowUpRightFromSquare className="h-4 w-4 md:h-6 w-6 mr-2" />
-                <p className="translate-y-[3px] md:translate-y-[5px]">
-                  Voir en direct
-                </p>
-              </a>
+              {
+                project.linkDemoOrDeployedSite && (
+                  <a
+                    className="flex items-end blue-text text-xs  md:text-lg font-bold"
+                    href={`${project.linkDemoOrDeployedSite}`}
+                  >
+                    <FaArrowUpRightFromSquare className="h-4 w-4 md:h-6 w-6 mr-2" />
+                    <p className="translate-y-[3px] md:translate-y-[5px]">
+                      Voir en direct
+                    </p>
+                  </a>
+                )
+              }
+              {
+              }
               <a
                 className="flex items-end blue-text text-xs md:text-lg font-bold"
                 href={`${project.linkCode}`}
