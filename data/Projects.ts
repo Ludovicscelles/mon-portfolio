@@ -46,7 +46,6 @@ export const projects: Project[] = [
       "Figma",
       "Agile Scrum",
     ],
-    linkDemoOrDeployedSite: "https://predeploy.students-cda-js-4.wilders.dev/",
     linkCode:
       "https://github.com/WildCodeSchool-CDA-FT-2024-09/JS-CDA-Projet-2-Team-D",
     bgColor: "bg-clear-blue",
@@ -70,7 +69,7 @@ export const projects: Project[] = [
       {
         title: "Affichage de films récents et locaux : ",
         description:
-          "sélections et présentation des 4 films les plus récents et de 4 films français sur la page d’accueil.",
+          "sélection et présentation des 4 films les plus récents et de 4 films français sur la page d’accueil.",
       },
       {
         title: "Gestion des résultats de recherche : ",
