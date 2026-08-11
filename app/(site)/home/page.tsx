@@ -1,5 +1,6 @@
 import ProfilPicture from "../components/ProfilPicture";
 import OpeningToProjects from "../components/OpeningToProjects";
+import Chatbot from "../components/Chatbot";
 import Link from "next/link";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <OpeningToProjects />
         </Link>
       </div>
+      <Chatbot />
     </div>
   );
 }
