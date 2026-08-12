@@ -1,20 +1,42 @@
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
 
-
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+type ChatMessage = {
+  role: "user" | "assistant";
+  content: string;
+};
+
 export async function POST(request: Request) {
   try {
-    const { message } = await request.json();
+    const { messages } = await request.json();
 
-    if (!message || typeof message !== "string") {
+    const areMessagesValid =
+      Array.isArray(messages) &&
+      messages.length > 0 &&
+      messages.length <= 20 &&
+      messages.every((message): message is ChatMessage => {
+        if (
+          !message ||
+          (message.role !== "user" && message.role !== "assistant") ||
+          typeof message.content !== "string"
+        ) {
+          return false;
+        }
+
+        const content = message.content.trim();
+
+        return content.length > 0 && content.length <= 2000;
+      });
+
+    if (!areMessagesValid) {
       return NextResponse.json(
-        { error: "Message invalide."},
-        { status: 400 }
-      )
+        { error: "Messages invalides." },
+        { status: 400 },
+      );
     }
 
     const response = await openai.responses.create({
@@ -22,7 +44,7 @@ export async function POST(request: Request) {
       instructions: `
       Tu es l'assistant du portfolio de Ludovic.
       
-      Ton rôle est d'aider les visisteurs à découvrir son profil professionnel.
+      Ton rôle est d'aider les visiteurs à découvrir son profil professionnel.
 
       Informations sur Ludovic :
       - Développeur web
@@ -32,8 +54,8 @@ export async function POST(request: Request) {
       - Outils : Visual Studio Code, Docker
       - Compétences techniques : Modélisation de bases de données et déploiement
       - Il réalise des applications web modernes.
-      - Ses projets sont disponibles dans la section Projets du porfolio.
-      - Les visteurs peuvent le contacter depuis la section Contact du portfolio.
+      - Ses projets sont disponibles dans la section Projets du portfolio.
+      - Les visiteurs peuvent le contacter depuis la section Contact du portfolio.
 
       Règles :
       - Réponds en français par défaut.
@@ -42,18 +64,21 @@ export async function POST(request: Request) {
       - Si tu ne connais pas une information, dis-le.
       - N'invente jamais une expérience ou une compétence.
       `,
-      input: message,
+      input: messages.map((message) => ({
+        role: message.role,
+        content: message.content,
+      })),
     });
 
     return NextResponse.json({
-      answer: response.output_text
+      answer: response.output_text,
     });
   } catch (error) {
-    console.error("Erreur chatbot :", error)
+    console.error("Erreur chatbot :", error);
 
     return NextResponse.json(
       { error: "Une erreur est survenue." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

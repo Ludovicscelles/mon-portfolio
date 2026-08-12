@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 
 type Message = {
+  id: string;
   role: "user" | "assistant";
   content: string;
 };
@@ -12,6 +13,7 @@ export default function Chatbot() {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
+      id: crypto.randomUUID(),
       role: "assistant",
       content:
         "Bonjour 👋 Je suis l'assistant de Ludovic. Vous pouvez me poser des questions sur son profil, ses compétences ou ses projets.",
@@ -27,13 +29,19 @@ export default function Chatbot() {
 
     if (!message || loading) return;
 
-    setMessages((prev) => [
-      ...prev,
-      {
-        role: "user",
-        content: message,
-      },
-    ]);
+    const userMessage: Message = {
+      id: crypto.randomUUID(),
+      role: "user",
+      content: message,
+    };
+
+    const conversation = [...messages, userMessage];
+
+    setMessages(conversation);
+
+    const messagesForApi = conversation
+      .slice(-20)
+      .map(({ role, content }) => ({ role, content }));
 
     setInput("");
     setLoading(true);
@@ -45,7 +53,7 @@ export default function Chatbot() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message,
+          messages: messagesForApi,
         }),
       });
 
@@ -58,6 +66,7 @@ export default function Chatbot() {
       setMessages((prev) => [
         ...prev,
         {
+          id: crypto.randomUUID(),
           role: "assistant",
           content: data.answer,
         },
@@ -68,6 +77,7 @@ export default function Chatbot() {
       setMessages((prev) => [
         ...prev,
         {
+          id: crypto.randomUUID(),
           role: "assistant",
           content: "Désolé, je n'arrive pas à répondre pour le moment.",
         },
@@ -82,6 +92,7 @@ export default function Chatbot() {
       {/* Bouton flottant */}
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Fermer le chatbot" : "Ouvrir le chatbot"}
         className="fixed bottom-6 right-6 z-50 rounded-full bg-black px-5 py-4 text-white shadow-lg"
       >
         {isOpen ? "x" : "💬"}
@@ -103,12 +114,12 @@ export default function Chatbot() {
 
           {/* Message */}
           <div className="flex-1 space-y-4 overflow-y-auto p-4">
-            {messages.map((message, index) => (
+            {messages.map((message) => (
               <div
-                key={index}
+                key={message.id}
                 className={
                   message.role === "user"
-                    ? "mr-auto max-w-[80%] rounded-xl bg-black p-3 text-white"
+                    ? "ml-auto max-w-[80%] rounded-xl bg-black p-3 text-white"
                     : "mr-auto max-w-[80%] rounded-xl bg-gray-100 p-3 text-black"
                 }
               >
@@ -129,13 +140,15 @@ export default function Chatbot() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              maxLength={2000}
               placeholder="Posez votre question..."
               className="flex-1 rounded-lg border px-3 py-2 outline-none"
+              disabled={loading}
             />
 
             <button
               type="submit"
-              disabled={loading}
+              disabled={loading || !input.trim()}
               className="rounded-lg bg-black px-4 py-2 text-white disabled:opacity-50"
             >
               Envoyer
