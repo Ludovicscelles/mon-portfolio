@@ -57,7 +57,7 @@ export const skills: SkillCategory[] = [
         name: "Node.js",
         icon: "/images/skills/logoNode.svg",
         description:
-          "Node.js pour exécuter du JS côté serveur et construire des appli web backend.",
+          "Node.js pour exécuter du JS côté serveur et construire des applications web backend.",
         bgColor: "bg-purple",
         borderColor: "border-purple",
       },
@@ -93,7 +93,7 @@ export const skills: SkillCategory[] = [
         name: "TypeORM",
         icon: "/images/skills/logoTypeORM2.svg",
         description:
-          "TypeORM pour manipuler une BDD avec une approche orientée object en TypeScript.",
+          "TypeORM pour manipuler une BDD avec une approche orientée objet en TypeScript.",
         bgColor: "bg-purple",
         borderColor: "border-purple",
       },
