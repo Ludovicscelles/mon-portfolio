@@ -63,6 +63,11 @@ export async function POST(request: Request) {
       - Réponds principalement aux questions concernant Ludovic, ses compétences, ses projets et son parcours.
       - Si tu ne connais pas une information, dis-le.
       - N'invente jamais une expérience ou une compétence.
+      - N'utilise pas de Markdown, de code ou de balises HTML dans tes réponses.
+      - Réponds en texte brut avec des phrases courtes et claires.
+      - Évite les phrases longues et complexes.
+      - Lorque les compétences sont citées, regroupe-les dans des phrases courtes plutôt que dans une liste.
+      - Quand la réponse contient plusieurs catégories d'informations, sépare-les par des paragraphes courts.
       `,
       input: messages.map((message) => ({
         role: message.role,

@@ -101,7 +101,7 @@ export default function Chatbot() {
       {/* Fenêtre du chatbot */}
       {isOpen && (
         <div
-          className="fixed bottom-24 left-4 right-4 z-50 flex h-[70vh] max-h-[500px] flex-col overflow-hidden rounded-2xl border bg-white shadow-2xl sm:left-auto sm:right-6 sm:w-[350px] max-[400px]:bottom-20
+          className="fixed bottom-24 left-4 right-4 z-50 flex h-[70vh] max-h-[500px] flex-col overflow-hidden rounded-2xl border bg-white shadow-2xl sm:left-auto sm:right-6 sm:w-[400px] max-[400px]:bottom-20
     max-[400px]:h-[60vh]"
         >
           {/* Header */}
@@ -119,8 +119,8 @@ export default function Chatbot() {
                 key={message.id}
                 className={
                   message.role === "user"
-                    ? "ml-auto max-w-[80%] rounded-xl bg-black p-3 text-white"
-                    : "mr-auto max-w-[80%] rounded-xl bg-gray-100 p-3 text-black"
+                    ? "ml-auto max-w-[80%] rounded-xl bg-black p-3 leading-relaxed text-white"
+                    : "mr-auto max-w-[95%] rounded-xl bg-gray-100 p-3 leading-relaxed text-black"
                 }
               >
                 {message.content}
