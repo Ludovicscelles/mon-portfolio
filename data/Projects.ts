@@ -7,7 +7,7 @@ export const projects: Project[] = [
     logo: "/images/projects/logoClubCompta.svg",
     displayDesktop: "/images/projects/displayDesktopClubCompta.svg",
     displayMobile: "/images/projects/displayMobileClubCompta.svg",
-    shortDescription: "Application de Comptabilité",
+    shortDescription: "Application de comptabilité",
     objective:
       "Développer, au sein d'une équipe de quatre personnes, une application de comptabilité pour une association sportive",
     features: [
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     displayMobile: "/images/projects/displayMobileSwapIt.svg",
     shortDescription: "Site d’échanges de matériel IT",
     objective:
-      "Développer, au seins d'une équipe de quatre personnes, une plateforme d’échange dédiée au troc de matériel IT entre utilisateurs.",
+      "Développer, au sein d'une équipe de quatre personnes, une plateforme d’échange dédiée au troc de matériel IT entre utilisateurs.",
     features: [
       {
         title: "Gestion des catégories : ",
