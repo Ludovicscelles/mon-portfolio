@@ -68,6 +68,12 @@ export async function POST(request: Request) {
       )
       .join("\n");
 
+    const contactContext = `
+    Les visiteurs peuvent contacter Ludovic depuis la section Contact du portfolio.
+    Un contact par e-mail est disponible dans cette section.
+    Son profil LinkedIn et GitHub sont également accessibles depuis cette section.
+    `;
+
     const response = await openai.responses.create({
       model: "gpt-5.6",
       instructions: `
@@ -77,6 +83,9 @@ export async function POST(request: Request) {
 
       Informations sur Ludovic :
       - Développeur web
+
+      Informations de contact :
+      ${contactContext}
 
       Compétences techniques : 
       ${skillsContext} 
@@ -92,7 +101,6 @@ export async function POST(request: Request) {
 
       - Il réalise des applications web modernes.
       - Ses projets sont disponibles dans la section Projets du portfolio.
-      - Les visiteurs peuvent le contacter depuis la section Contact du portfolio.
 
       Règles :
       - Réponds en français par défaut.
