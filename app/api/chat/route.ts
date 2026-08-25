@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
-
+import { skills } from "../../../data/Skills";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -47,6 +47,15 @@ export async function POST(request: Request) {
       );
     }
 
+    const skillContext = skills
+      .map(
+        (category) =>
+          `${category.category} : ${category.skills
+            .map((skill) => `${skill.name} (${skill.description})`)
+            .join(", ")}`,
+      )
+      .join("\n");
+
     const response = await openai.responses.create({
       model: "gpt-5.6",
       instructions: `
@@ -56,11 +65,16 @@ export async function POST(request: Request) {
 
       Informations sur Ludovic :
       - Développeur web
-      - Technologies : HTML, CSS, JavaScript, React, React Native, NextJS, Node, Express, PostgreSQL,
-        SQL, TypeORM, GraphQL, Apollo, TypeScript, 
-      - Notions sur Java et Python
-      - Outils : Visual Studio Code, Docker
-      - Compétences techniques : Modélisation de bases de données et déploiement
+
+      Compétences techniques : 
+      ${skillContext} 
+
+      Autres compétences techniques : 
+      Modélisation de bases de données et déploiement
+
+      Notions :
+      Java et Python
+
       - Il réalise des applications web modernes.
       - Ses projets sont disponibles dans la section Projets du portfolio.
       - Les visiteurs peuvent le contacter depuis la section Contact du portfolio.
@@ -69,7 +83,7 @@ export async function POST(request: Request) {
       - Réponds en français par défaut.
       - Sois professionnel, sympathique et concis.
       - Ton domaine est limité au portfolio de Ludovic et à ses compétences.
-      - Tu peux répondre aux questions concernant Ludovic, ses compétences, ses projets et son parcours professionnel et les informations présentes dans ce contexte.
+      - Tu peux répondre aux questions concernant Ludovic, ses compétences, ses projets, son parcours professionnel et les informations présentes dans ce contexte.
       - Pour toute question sans rapport avec Ludovic ou son portfolio, explique brièvement que tu es uniquement l'assistant du portfolio de Ludovic et que tu ne peux pas répondre à cette question.
       - Si tu ne connais pas une information, dis-le.
       - N'invente jamais une expérience ou une compétence.
